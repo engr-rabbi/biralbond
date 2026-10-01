@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /biralbond/admin/
+
+Sitemap: https://engr-rabbi.github.io/biralbond/sitemap.xml
