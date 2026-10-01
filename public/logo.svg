@@ -1,29 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-<defs>
-  <style type="text/css">
-    .st194{fill:#2D2D2D;stroke:#FFFFFF;stroke-width:0.6317;stroke-miterlimit:10;}
-    .st23{fill:#FFFFFF;}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 1152" width="864" height="1152">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F7FAF8"/>
+    </linearGradient>
+    
+    <!-- Dark Green Gradient -->
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#054A29"/>
+      <stop offset="100%" stop-color="#02331C"/>
+    </linearGradient>
 
-    .z-breathe {
-      animation: breathe 2.5s ease-in-out infinite;
-    }
+    <!-- Orange/Amber Gradient -->
+    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E86E18"/>
+      <stop offset="100%" stop-color="#D15505"/>
+    </linearGradient>
 
-    @keyframes breathe {
-      0%, 100% { opacity: 0.7; }
-      50% { opacity: 1; }
-    }
-  </style>
-</defs>
+    <!-- Eye Gradient -->
+    <radialGradient id="eye-grad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#A2C538"/>
+      <stop offset="70%" stop-color="#678E1A"/>
+      <stop offset="100%" stop-color="#3C5708"/>
+    </radialGradient>
+  </defs>
 
-<g>
-  <path class="st194" d="M24.51,28.51H5.49c-2.21,0-4-1.79-4-4V5.49c0-2.21,1.79-4,4-4h19.03c2.21,0,4,1.79,4,4v19.03
-    C28.51,26.72,26.72,28.51,24.51,28.51z"/>
-  <g class="z-breathe">
-    <path class="st23" d="M15.47,7.1l-1.3,1.85c-0.2,0.29-0.54,0.47-0.9,0.47h-7.1V7.09C6.16,7.1,15.47,7.1,15.47,7.1z"/>
-    <polygon class="st23" points="24.3,7.1 13.14,22.91 5.7,22.91 16.86,7.1"/>
-    <path class="st23" d="M14.53,22.91l1.31-1.86c0.2-0.29,0.54-0.47,0.9-0.47h7.09v2.33H14.53z"/>
+  <!-- Canvas Background -->
+  <rect width="864" height="1152" fill="url(#bg-grad)"/>
+
+  <!-- Main Container Group -->
+  <g transform="translate(0, 40)">
+
+    <!-- BACK MAP (Bangladesh Outline Symbolized) -->
+    <g id="bangladesh-map" opacity="0.85">
+      <path d="M 520,310 C 530,290 550,285 570,295 C 590,305 605,290 620,310 C 630,325 615,345 625,365 C 635,385 645,395 630,415 C 620,430 635,450 620,465 C 600,485 580,455 575,480 C 565,495 555,470 545,460 C 535,450 540,430 525,415 C 515,400 525,380 520,360 Z" fill="#054A29"/>
+      <!-- Coastal / Island Accents -->
+      <circle cx="585" cy="485" r="5" fill="#054A29"/>
+      <circle cx="598" cy="478" r="4" fill="#054A29"/>
+      <circle cx="572" cy="495" r="6" fill="#054A29"/>
+    </g>
+
+    <!-- HEART OUTLINE (Green Frame) -->
+    <path id="heart-frame" d="M 432,600 C 370,540 180,420 180,290 C 180,180 270,140 370,180 C 410,196 432,225 432,225 C 432,225 454,196 494,180 C 594,140 684,180 684,290 C 684,420 494,540 432,600 Z" fill="none" stroke="url(#green-grad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- CAT ILLUSTRATION -->
+    <g id="cat-character">
+      <!-- Outer Body Outline / Back Base -->
+      <path d="M 280,570 C 270,450 330,230 432,230 C 534,230 594,450 584,570 Z" fill="#ECE7E1"/>
+
+      <!-- Tabby Stripes (Head & Side Markings) -->
+      <path d="M 432,240 C 420,260 410,280 432,295 C 454,280 444,260 432,240 Z" fill="#5A4E46"/>
+      <path d="M 400,250 C 390,270 385,285 405,298" stroke="#5A4E46" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M 464,250 C 474,270 479,285 459,298" stroke="#5A4E46" stroke-width="8" stroke-linecap="round" fill="none"/>
+      
+      <!-- Cheeks / Face Fur Base -->
+      <path d="M 310,320 Q 250,230 290,170 Q 360,210 370,280 Z" fill="#E8DDD3"/> <!-- Left Ear Base -->
+      <path d="M 554,320 Q 614,230 574,170 Q 504,210 494,280 Z" fill="#E8DDD3"/> <!-- Right Ear Base -->
+
+      <!-- Inner Ears (Pinkish Tone) -->
+      <path d="M 305,300 Q 270,230 295,185 Q 345,220 355,275 Z" fill="#F4B8B0"/>
+      <path d="M 559,300 Q 594,230 569,185 Q 519,220 509,275 Z" fill="#F4B8B0"/>
+
+      <!-- Face Muzzle (White) -->
+      <ellipse cx="432" cy="390" rx="95" ry="70" fill="#FFFFFF"/>
+      <path d="M 360,370 C 340,310 432,280 432,320 C 432,280 524,310 504,370 C 484,430 380,430 360,370 Z" fill="#FFFFFF"/>
+
+      <!-- Eyes -->
+      <!-- Left Eye -->
+      <g transform="translate(370, 335)">
+        <ellipse cx="0" cy="0" rx="26" ry="32" fill="#2C221E"/>
+        <ellipse cx="0" cy="0" rx="22" ry="28" fill="url(#eye-grad)"/>
+        <ellipse cx="-2" cy="0" rx="10" ry="22" fill="#121706"/> <!-- Pupil -->
+        <circle cx="-8" cy="-10" r="7" fill="#FFFFFF"/> <!-- Specular Highlight -->
+        <circle cx="6" cy="8" r="3" fill="#FFFFFF"/>
+      </g>
+
+      <!-- Right Eye -->
+      <g transform="translate(494, 335)">
+        <ellipse cx="0" cy="0" rx="26" ry="32" fill="#2C221E"/>
+        <ellipse cx="0" cy="0" rx="22" ry="28" fill="url(#eye-grad)"/>
+        <ellipse cx="-2" cy="0" rx="10" ry="22" fill="#121706"/> <!-- Pupil -->
+        <circle cx="-8" cy="-10" r="7" fill="#FFFFFF"/> <!-- Specular Highlight -->
+        <circle cx="6" cy="8" r="3" fill="#FFFFFF"/>
+      </g>
+
+      <!-- Nose (Soft Pink) -->
+      <path d="M 422,370 C 422,365 442,365 442,370 C 442,378 435,386 432,386 C 429,386 422,378 422,370 Z" fill="#E88D8D"/>
+
+      <!-- Mouth & Whiskers -->
+      <path d="M 422,392 Q 432,400 442,392" stroke="#5A4E46" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <!-- Whiskers Left -->
+      <line x1="340" y1="380" x2="250" y2="365" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+      <line x1="335" y1="390" x2="240" y2="390" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+      <line x1="340" y1="400" x2="255" y2="415" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+      <!-- Whiskers Right -->
+      <line x1="524" y1="380" x2="614" y2="365" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+      <line x1="529" y1="390" x2="624" y2="390" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+      <line x1="524" y1="400" x2="609" y2="415" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Paws Resting on Banner Edge -->
+      <!-- Left Paw -->
+      <g transform="translate(355, 545)">
+        <path d="M -45,-10 C -45,-35 45,-35 45,-10 C 45,25 -45,25 -45,-10 Z" fill="#FFFFFF" stroke="#D1C9C0" stroke-width="3"/>
+        <line x1="-15" y1="-25" x2="-15" y2="5" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+        <line x1="15" y1="-25" x2="15" y2="5" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <!-- Right Paw -->
+      <g transform="translate(509, 545)">
+        <path d="M -45,-10 C -45,-35 45,-35 45,-10 C 45,25 -45,25 -45,-10 Z" fill="#FFFFFF" stroke="#D1C9C0" stroke-width="3"/>
+        <line x1="-15" y1="-25" x2="-15" y2="5" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+        <line x1="15" y1="-25" x2="15" y2="5" stroke="#E2DCD5" stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- GREEN ARCH BASE UNDER CAT -->
+    <path d="M 220,580 Q 432,550 644,580" fill="none" stroke="url(#green-grad)" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- MAIN BRAND NAME: BiralBond -->
+    <g id="brand-name" transform="translate(432, 700)">
+      <!-- Custom Typography Rendering -->
+      <text x="0" y="0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="124" letter-spacing="-1">
+        <tspan fill="url(#green-grad)">Biral</tspan><tspan fill="url(#orange-grad)">Bond</tspan>
+      </text>
+
+      <!-- Heart + Paw Accent Icon above 'd' -->
+      <g transform="translate(270, -115) scale(0.65)">
+        <path d="M 0,30 C -20,10 -50,-10 -50,-35 C -50,-60 -25,-75 0,-50 C 25,-75 50,-60 50,-35 C 50,-10 20,10 0,30 Z" fill="none" stroke="url(#green-grad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Mini Paw inside heart -->
+        <ellipse cx="0" cy="-28" rx="10" ry="8" fill="url(#orange-grad)"/>
+        <circle cx="-14" cy="-42" r="4.5" fill="url(#orange-grad)"/>
+        <circle cx="-5" cy="-49" r="4.5" fill="url(#orange-grad)"/>
+        <circle cx="5" cy="-49" r="4.5" fill="url(#orange-grad)"/>
+        <circle cx="14" cy="-42" r="4.5" fill="url(#orange-grad)"/>
+      </g>
+    </g>
+
+    <!-- SUBTITLE IN BENGALI -->
+    <text x="432" y="780" text-anchor="middle" fill="#222222" font-family="'Siyam Rupali', 'Kalpurush', 'Noto Sans Bengali', sans-serif" font-weight="700" font-size="34" letter-spacing="0.5">
+      বিড়ালপ্রেমীদের জন্য বাংলাদেশের সবচেয়ে বড় প্ল্যাটফর্ম
+    </text>
+
+    <!-- DIVIDER WITH PAW PRINT -->
+    <g id="divider" transform="translate(432, 840)">
+      <line x1="-150" y1="0" x2="-40" y2="0" stroke="url(#green-grad)" stroke-width="4" stroke-linecap="round"/>
+      
+      <!-- Central Paw Print -->
+      <g id="paw-icon" transform="translate(0, -2)">
+        <ellipse cx="0" cy="4" rx="18" ry="14" fill="url(#orange-grad)"/>
+        <circle cx="-20" cy="-14" r="7" fill="url(#orange-grad)"/>
+        <circle cx="-7" cy="-24" r="7" fill="url(#orange-grad)"/>
+        <circle cx="7" cy="-24" r="7" fill="url(#orange-grad)"/>
+        <circle cx="20" cy="-14" r="7" fill="url(#orange-grad)"/>
+      </g>
+
+      <line x1="40" y1="0" x2="150" y2="0" stroke="url(#green-grad)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- CATEGORIES / SERVICES TAGLINE IN BENGALI -->
+    <text x="432" y="910" text-anchor="middle" fill="#333333" font-family="'Siyam Rupali', 'Kalpurush', 'Noto Sans Bengali', sans-serif" font-weight="600" font-size="28" letter-spacing="1">
+      অ্যাডপশন   |   চিকিৎসা   |   খাবার   |   পরিচর্যা   |   তথ্য   |   কমিউনিটি
+    </text>
+
   </g>
-</g>
 </svg>
